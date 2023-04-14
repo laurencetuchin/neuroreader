@@ -16,3 +16,6 @@ The font selection is Open Sans because this font is easy to read, with a clean 
 
 
 #### Uses React Router for creating navigational links
+
+
+#### Uses tailwindcss for styling
