@@ -13,3 +13,6 @@ The font selection is Open Sans because this font is easy to read, with a clean 
 #### Features to add
 - Font family selection between three choices 
 - Font colour selection between light, dark and darkest options
+
+
+#### Uses React Router for creating navigational links

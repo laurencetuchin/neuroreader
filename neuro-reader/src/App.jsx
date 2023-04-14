@@ -3,26 +3,36 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import NavigationHeader from './utilities/NavigationHeader'
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
+// pages to import
+import About from './utilities/About'
+import Home from './utilities/Home'
+import NeuroReaderBranding from './utilities/NeuroReaderBranding'
 
 function App() {
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Neuro Reader</h1>
-      <div className="card">
-        <NavigationHeader />
-        <p>
-          Let's upgrade your learning
-        </p>
-      </div>
-      {/* Add transform text section */}
+        <BrowserRouter>
+          {/* <NavigationHeader /> */}
+          <header>
+            <nav>
+              {/* <NeuroReaderBranding /> */}
+              <NavigationHeader />
+              {/* <NavLink to="/">Home</NavLink> */}
+              {/* <NavLink to="about">About</NavLink> */}
+            </nav>
+          </header>
 
-    </div>
+          <main>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="about" element={<About />} />
+          </Routes>
+       
+      {/* Add transform text component */}
+
+          </main>
+        </BrowserRouter>
   )
 }
 
