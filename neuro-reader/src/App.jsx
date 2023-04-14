@@ -8,6 +8,9 @@ import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 import About from './utilities/About'
 import Home from './utilities/Home'
 import NeuroReaderBranding from './utilities/NeuroReaderBranding'
+import 'tailwindcss/tailwind.css';
+
+
 
 function App() {
 
@@ -20,6 +23,10 @@ function App() {
               <NavigationHeader />
               {/* <NavLink to="/">Home</NavLink> */}
               {/* <NavLink to="about">About</NavLink> */}
+              <div className="bg-primary text-secondary p-4 rounded-lg shadow-lg">
+  This is a styled div using Tailwind CSS classes
+</div>
+
             </nav>
           </header>
 
