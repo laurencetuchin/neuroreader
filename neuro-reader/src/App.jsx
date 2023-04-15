@@ -9,12 +9,14 @@ import About from './utilities/About'
 import Home from './utilities/Home'
 import NeuroReaderBranding from './utilities/NeuroReaderBranding'
 import 'tailwindcss/tailwind.css';
+import NeuroReader from './features/NeuroReader'
 
 
 
 function App() {
 
   return (
+    <>
         <BrowserRouter>
           {/* <NavigationHeader /> */}
           <header>
@@ -23,9 +25,9 @@ function App() {
               <NavigationHeader />
               {/* <NavLink to="/">Home</NavLink> */}
               {/* <NavLink to="about">About</NavLink> */}
-              <div className="bg-primary text-secondary p-4 rounded-lg shadow-lg">
+              {/* <div className="bg-primary text-secondary p-4 rounded-lg shadow-lg">
   This is a styled div using Tailwind CSS classes
-</div>
+</div> */}
 
             </nav>
           </header>
@@ -37,9 +39,11 @@ function App() {
           </Routes>
        
       {/* Add transform text component */}
-
           </main>
         </BrowserRouter>
+          <NeuroReader />
+</>
+
   )
 }
 
