@@ -15,7 +15,17 @@ export default function NeuroReader() {
         const words = text.split(' ');
         const boldedWords = words.map(word => {
           if (word.length < 3) {
-            return <span className="font-bold">{word}</span>;
+            const smallWord = word.charAt(0);
+
+            // fix word length only split char 1 
+            return (
+                <span>
+                    <span className="font-bold">{smallWord}
+                </span>
+                    <span>{word.slice(smallWord.length)}</span>    
+                <span>&nbsp;</span>
+            </span>
+            );
           } else {
             // percentage calculation of word length
             const wordLength = word.length * 40 / 100;
@@ -27,6 +37,8 @@ export default function NeuroReader() {
                   {boldText}
                 </span>
                 {plainText}
+                  <span>&nbsp;</span>
+                <p> </p>
               </span>
             );
           }
