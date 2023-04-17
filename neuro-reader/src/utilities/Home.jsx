@@ -1,4 +1,5 @@
 import React from 'react'
+import NeuroReader from '../features/NeuroReader'
 import NeuroReaderBranding from './NeuroReaderBranding'
 
 export default function Home() {
@@ -6,8 +7,9 @@ export default function Home() {
     <div>
     
         <div className="bg-primary">Welcome to Neuro Reader</div>
-        <p>It's time to upgrade your reading</p>
+        <p className='font-sans text-base hover:capitalize'>It's time to upgrade your reading</p>
         {/* Add animation that bolds the writing in the P tag */}
+        <NeuroReader />
     </div>
   )
 }

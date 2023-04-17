@@ -5,15 +5,18 @@ import NeuroReaderBranding from './NeuroReaderBranding'
 
 export default function NavigationHeader() {
     return (
+        <nav>
+            <ul>
+                <li>
+                     <NavLink exact to="/" >Home</NavLink>
+                </li>                
+                <li>
+                    <NavLink exact to="about">About</NavLink>
+                </li>
+            </ul>
         <div>
-                {/* <Routes>
-                    <Route path='/about' element={<About />}/>
-                </Routes> */}
-                {/* <Link to={<About />} /> */}
                 <NeuroReaderBranding />
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="about">About</NavLink>
-                
         </div>
+        </nav>
     )
 }

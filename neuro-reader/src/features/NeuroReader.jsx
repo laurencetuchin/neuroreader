@@ -28,6 +28,7 @@ export default function NeuroReader() {
             );
           } else {
             // percentage calculation of word length
+            // opportunity to increase bold dominance score function
             const wordLength = word.length * 40 / 100;
             const boldText = word.slice(0, wordLength);
             const plainText = word.slice(wordLength);
