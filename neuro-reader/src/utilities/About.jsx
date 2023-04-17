@@ -4,11 +4,17 @@ import 'tailwindcss/tailwind.css';
 
 
 export default function About() {
+
+
+
   return (
     <>
+    
     <div>
     <br />
-    <p className='text-lg text-cyan-800/90'>Welcome to Neuro Reader, designed to help neuro diverse learners to read more easily and effectively. Our mission is to provide a platform that allows users to input their text and receive customised reading support to help them achieve their full potential.
+    
+    
+    <p className='text-lg text-cyan-800'>Welcome to Neuro Reader, designed to help neuro diverse learners to read more easily and effectively. Our mission is to provide a platform that allows users to input their text and receive customised reading support to help them achieve their full potential.
     <br />
     <br />
     Our purpose is to make reading accessible to everyone, regardless of their neurodiversity. We understand that reading can be a challenge and frustrating experience for some learners, and we aim to provide a solution that caters to their unique needs. Our website uses innovative technology to identify and address the specific challenges that neuro diverse learners face when reading, whether it be difficulty with decoding, comprehension, or fluency. 

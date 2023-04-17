@@ -3,7 +3,6 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import NavigationHeader from './utilities/NavigationHeader'
-// import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom'
 // pages to import
 import About from './utilities/About'
 import Home from './utilities/Home'
@@ -33,11 +32,10 @@ function App() {
 
   return ( 
     <>
-    <div className='bg-fuchsia-200'>
+    <div className='bg-slate-50'>
 
           {/* <NavigationHeader /> */}
-          <header>
-            <nav>
+          
               {/* <NeuroReaderBranding /> */}
               {/* <NavigationHeader /> */}
               {/* <NavLink to="/">Home</NavLink> */}
@@ -46,16 +44,14 @@ function App() {
   This is a styled div using Tailwind CSS classes
 </div> */}
 
-            </nav>
-          </header>
+         
 
           <RouterProvider router={router} />
 
        
-      {/* Add transform text component */}
           
-</div>
-</>
+        </div>
+      </>
 
   )
 }
