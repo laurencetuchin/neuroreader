@@ -22,7 +22,10 @@ export default function About() {
     <br /> 
     At our core, we are dedicated to helping others. We believe that everyone has the right to access education and information, and we strive to remove the barriers that prevent some learners from doing so. Our team of experts is passionate about making a positive impact on the lives of those who use our platform, and we are committed to continuously improving our services to ensure that our users receive the support they need to succeed.
     </p>
-    
+    <br />
+    <NavLink to={'/'}>
+      <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>Get started</button>
+    </NavLink>
     </div>
     </>
   )
