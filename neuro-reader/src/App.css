@@ -9,7 +9,7 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  @apply bg-blue-500;
+  @apply bg-slate-50 min-h-screen min-w-full;
 }
 
 .logo {
@@ -49,5 +49,5 @@
 }
 
 .body {
-  @apply bg-blue-700;
+  @apply bg-red-700;
 }

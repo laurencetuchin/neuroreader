@@ -10,11 +10,13 @@ export default function About() {
   return (
     <>
     
-    <div>
+    <div className='container mx-auto'>
+      <div className='py-4'>
+
     <br />
     
     
-    <p className='text-lg text-cyan-800'>Welcome to Neuro Reader, designed to help neuro diverse learners to read more easily and effectively. Our mission is to provide a platform that allows users to input their text and receive customised reading support to help them achieve their full potential.
+    <p className='text-lg sm:text-left text-cyan-800'>Welcome to Neuro Reader, designed to help neuro diverse learners to read more easily and effectively. Our mission is to provide a platform that allows users to input their text and receive customised reading support to help them achieve their full potential.
     <br />
     <br />
     Our purpose is to make reading accessible to everyone, regardless of their neurodiversity. We understand that reading can be a challenge and frustrating experience for some learners, and we aim to provide a solution that caters to their unique needs. Our website uses innovative technology to identify and address the specific challenges that neuro diverse learners face when reading, whether it be difficulty with decoding, comprehension, or fluency. 
@@ -26,6 +28,7 @@ export default function About() {
     <NavLink to={'/'}>
       <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'>Get started</button>
     </NavLink>
+      </div>
     </div>
     </>
   )

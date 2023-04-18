@@ -12,12 +12,13 @@ export default function NeuroReader() {
     // function that takes word input length and identifies whether appropriate to bold or not
     // need to update to include min one character if word length < 3 
     function boldFirstLetters(text) {
-        const words = text.split(' ');
+        const words = text.split(/[' ']/);
         const boldedWords = words.map(word => {
           if (word.length < 3) {
             const smallWord = word.charAt(0);
 
             // fix word length only split char 1 
+            // checks for period or comma 
             return (
                 <span>
                     <span className="font-bold">{smallWord}
@@ -37,9 +38,8 @@ export default function NeuroReader() {
                 <span className="font-bold">
                   {boldText}
                 </span>
-                {plainText}
-                  <span>&nbsp;</span>
-                <p> </p>
+                {plainText}&nbsp;
+                  {/* <span>&nbsp;</span> */}
               </span>
             );
           }
@@ -50,9 +50,9 @@ export default function NeuroReader() {
       return (
         <div className="flex flex-col">
           <label className="mb-2 font-bold text-lg" htmlFor="input-text">
-            Enter a paragraph:
+            Enter your text below:
           </label>
-          <div className="flex flex-wrap">
+          <div className="">
             {boldFirstLetters(inputValue)}
           </div>
           <textarea
