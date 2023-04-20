@@ -4,7 +4,7 @@
 
 
 .active{
-  @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+  @apply hover:text-blue-700 text-blue-500 font-bold rounded;
 }
 
 .a {
@@ -43,7 +43,7 @@ a {
   font-weight: 500;
   /* color: #2f3272; */
   text-decoration: inherit;
-  @apply text-blue-600 ml-2 items-center;
+  @apply text-gray-600 mx-2 items-center;
 }
 a:hover {
   @apply text-blue-300;

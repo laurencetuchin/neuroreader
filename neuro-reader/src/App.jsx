@@ -18,12 +18,15 @@ import {
 } from "react-router-dom";
 // layouts
 import RootLayout from './layouts/RootLayout'
+import HowToUse from './utilities/HowToUse'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
       <Route index element={<Home />} />
       <Route path="about" element={<About />} />
+      <Route path="how" element={<HowToUse />} />
+
   </Route>
   )
 );

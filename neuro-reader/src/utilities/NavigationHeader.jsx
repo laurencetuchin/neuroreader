@@ -5,7 +5,7 @@ import 'tailwindcss/tailwind.css';
 
 export default function NavigationHeader() {
     return (
-        <nav className='container flex justify-around py-8 mx-auto bg-white'>
+        <nav className=''>
             <div className='space-x-8'>
                      <NavLink exact to="/" >Home</NavLink>
                     <NavLink exact to="about">About</NavLink>
