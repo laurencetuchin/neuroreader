@@ -6,9 +6,13 @@ export default function RootLayout() {
     <div className="root-layout">
         <header>
             <nav>
-                <h1 className='mb-4 font-extrabold text-gray-800 md:text-5xl lg-text-6xl'>Neuro Reader</h1>
+                <div className='py-4'>
+
             <NavLink to="/" >Home</NavLink>
             <NavLink to="about">About</NavLink>
+            <NavLink to="how">How to use</NavLink>
+                </div>
+                <h1 className='mb-4 font-extrabold text-gray-800 md:text-5xl lg-text-6xl'>Neuro Reader</h1>
             </nav>
         </header>
 

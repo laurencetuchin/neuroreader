@@ -24,7 +24,7 @@ export default function NeuroReader() {
                     <span className="font-bold">{smallWord}
                 </span>
                     <span>{word.slice(smallWord.length)}</span>    
-                <span>&nbsp;</span>
+                {/* <span>&nbsp;</span> */}
             </span>
             );
           } else {
@@ -38,7 +38,7 @@ export default function NeuroReader() {
                 <span className="font-bold">
                   {boldText}
                 </span>
-                {plainText}&nbsp;
+                {plainText}
                   {/* <span>&nbsp;</span> */}
               </span>
             );
@@ -52,9 +52,6 @@ export default function NeuroReader() {
           <label className="mb-2 font-bold text-lg" htmlFor="input-text">
             Enter your text below:
           </label>
-          <div className="">
-            {boldFirstLetters(inputValue)}
-          </div>
           <textarea
             className="border border-gray-300 rounded-md py-2 px-4 mt-2"
             value={inputValue}
@@ -62,6 +59,9 @@ export default function NeuroReader() {
             id="input-text"
             rows={5}
           />
+          <div className="text-lg py-4 text-left">
+            {boldFirstLetters(inputValue)}
+          </div>
         </div>
       );
     
