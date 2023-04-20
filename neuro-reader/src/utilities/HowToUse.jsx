@@ -9,8 +9,8 @@ export default function HowToUse() {
         {description: 'Start reading the converted text and take advantage of the customised support provided to help you read more easily and effectively.', key: 3}
     ];
   return (
-    <div className='contain mx-auto py-4'>
-        <h1 className='text-lg mb-4'>How to use Neuro Reader</h1>
+    <div className='contain mx-auto py-12'>
+        <h1 className='text-lg mb-12 text-left '>How to use Neuro Reader</h1>
         <div className=''>
             
             <ol className='text-left text-base space-y-6 flex flex-wrap' type="1">

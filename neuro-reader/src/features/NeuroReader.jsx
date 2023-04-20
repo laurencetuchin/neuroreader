@@ -59,7 +59,8 @@ export default function NeuroReader() {
             id="input-text"
             rows={5}
           />
-          <div className="text-lg py-4 text-left">
+          <div className='py-4'></div>
+          <div className="text-lg py-4 text-left  rounded-md py-2 px-4 mt-2">
             {boldFirstLetters(inputValue)}
           </div>
         </div>
