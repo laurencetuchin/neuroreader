@@ -49,7 +49,7 @@ export default function NeuroReader() {
     
       return (
         <div className="flex flex-col">
-          <label className="mb-2 font-bold text-lg" htmlFor="input-text">
+          <label className="text-left mb-2 px-4 py-2 mt-2 text-base" htmlFor="input-text">
             Enter your text below:
           </label>
           <textarea
@@ -59,7 +59,7 @@ export default function NeuroReader() {
             id="input-text"
             rows={5}
           />
-          <div className='py-4'></div>
+          <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
           <div className="text-lg py-4 text-left  rounded-md py-2 px-4 mt-2">
             {boldFirstLetters(inputValue)}
           </div>
