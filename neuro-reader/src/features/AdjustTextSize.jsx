@@ -7,7 +7,7 @@ export default function AdjustTextSize() {
   return (
     <div>
         <p>Select your text size: </p>
-        <button className={`mr-2 px-2 py-1 rounded ${selectedSize} === 'text-sm' ? 
+        <button className={`mr-2 px-2 py-1 rounded ${selectedSize === 'text-sm' ? 
         'bg-gray-300' : ''}`} onClick={() => setSelectedSize('text-sm')}>
             Small
         </button>
