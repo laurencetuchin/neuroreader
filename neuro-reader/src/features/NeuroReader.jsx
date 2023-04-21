@@ -60,6 +60,7 @@ export default function NeuroReader() {
             onChange={handleInputChange}
             id="input-text"
             rows={5}
+            placeholder="Enter your text here"
           />
           <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
           <div className="text-lg py-4 text-left  rounded-md py-2 px-4 mt-2">
