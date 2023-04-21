@@ -16,7 +16,7 @@ export default function RootLayout() {
 
         </header>
 
-        <main>
+        <main className='md:container md:mx-auto '>
         <h1 className='mb-4 font-bold text-gray-800 text-3xl md:text-5xl lg-text-6xl'>Neuro Reader</h1>
             <Outlet />
         </main>
