@@ -13,7 +13,7 @@ export default function HowToUse() {
         <h1 className='text-lg mb-12 text-left '>How to use Neuro Reader</h1>
         <div className=''>
             
-            <ol className='text-left text-base space-y-6 flex flex-wrap' type="1">
+            <ol className='text-left text-base space-y-6 '>
                 {howTo.map((instruction, index) => {
                     return (
                         <li key={instruction.key}>{index + 1}. {instruction.description}</li>
