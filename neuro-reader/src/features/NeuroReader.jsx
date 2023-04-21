@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import AdjustTextSize from './AdjustTextSize';
 
 export default function NeuroReader() {
 
@@ -49,6 +50,7 @@ export default function NeuroReader() {
     
       return (
         <div className="flex flex-col">
+          <AdjustTextSize />
           <label className="text-left mb-2 px-4 py-2 mt-2 text-base" htmlFor="input-text">
             Enter your text below:
           </label>
@@ -63,6 +65,7 @@ export default function NeuroReader() {
           <div className="text-lg py-4 text-left  rounded-md py-2 px-4 mt-2">
             {boldFirstLetters(inputValue)}
           </div>
+
         </div>
       );
     

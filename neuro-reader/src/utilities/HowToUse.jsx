@@ -10,7 +10,7 @@ export default function HowToUse() {
     ];
   return (
     <div className='contain mx-auto py-12'>
-        <h1 className='text-2xl mb-12 text-left '>How to use Neuro Reader</h1>
+        <h1 className='text-2xl mb-12 text-left'>How to use Neuro Reader</h1>
         <div className=''>
             
             <ol className='text-left text-xl space-y-4 '>
