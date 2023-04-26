@@ -23,7 +23,7 @@ export default function AdjustTextSize() {
       >
         Large
       </button>
-
+        
         <p className={`mt-4 ${selectedSize}`}>This is sample text with {selectedSize} size.</p>
     </div>
   )

@@ -1,15 +1,17 @@
 import React from 'react'
 import { useState } from 'react'
 import AdjustColor from './AdjustColor';
-import AdjustTextSize from './AdjustTextSize';
+// import AdjustTextSize from './AdjustTextSize';
 
-export default function NeuroReader() {
+export default function NeuroReader({ textSize }) {
 
     const [inputValue, setInputValue] = useState('');
 
     function handleInputChange(event) {
         setInputValue(event.target.value);
     }
+
+    const magicColor = "text-red-900";
 
     // function that takes word input length and identifies whether appropriate to bold or not
     // need to update to include min one character if word length < 3 
@@ -51,8 +53,8 @@ export default function NeuroReader() {
     
       return (
         <div className="flex flex-col">
-          <AdjustTextSize />
-          <AdjustColor />
+          {/* <AdjustTextSize /> */}
+          <AdjustColor magicColor={magicColor} />
           <label className="text-left mb-2 px-4 py-2 mt-2 text-base" htmlFor="input-text">
             Enter your text below:
           </label>
@@ -65,9 +67,11 @@ export default function NeuroReader() {
             placeholder="Enter your text here"
           />
           <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
-          <div className="text-lg py-4 text-left  rounded-md py-2 px-4 mt-2">
+          <div className={`${textSize}`}>
             {boldFirstLetters(inputValue)}
           </div>
+          <div>the color is: {magicColor}</div>
+          <div>the text size is {textSize}</div>
 
         </div>
       );
