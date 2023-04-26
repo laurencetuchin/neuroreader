@@ -1,12 +1,12 @@
 import React from 'react'
 import { useState, useContext } from 'react'
 import AdjustColor from './AdjustColor';
-import { TextProvider, TextContext } from '../utilities/MyContext';
+import { TextProvider, TextContext, SET_TEXT_COLOR } from '../utilities/MyContext';
 import AdjustTextSize from './AdjustTextSize';
 
 export default function NeuroReader({ textSize }) {
     const [textState, textDispatch] = useContext(TextContext);
-    const currentTextColor = textState.textColor; 
+    
     const [inputValue, setInputValue] = useState('');
     // const size = useContext(TextSizeContext);
 
@@ -79,6 +79,7 @@ export default function NeuroReader({ textSize }) {
             {boldFirstLetters(inputValue)}
           </div>
           <div>the color is: {magicColor}</div>
+          <div className={`${textState.textColor} ${textState.textSize}`}>the color is now: </div>
           <div>the text size is {textSize}</div>
           {/* <MyContext /> */}
 
