@@ -7,7 +7,7 @@ export default function AdjustColor() {
     const [state, dispatch] = useContext(TextContext);
 
     const handleColorChange = (color) => {
-      dispatch({ type: 'SET_TEXT_COLOR', payload: color });
+      dispatch({ type: SET_TEXT_COLOR, payload: color });
     };
 
     // const [selectedColor, setSelectedColor] = useState(magicColor);
