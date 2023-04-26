@@ -1,9 +1,8 @@
 import React from 'react'
-import { useContext } from 'react';
-import { useState } from 'react'
-import MyContext from '../utilities/MyContext';
+import { useState, useContext } from 'react'
 import AdjustColor from './AdjustColor';
-// import AdjustTextSize from './AdjustTextSize';
+import { TextProvider, TextContext } from '../utilities/MyContext';
+import AdjustTextSize from './AdjustTextSize';
 
 export default function NeuroReader({ textSize }) {
 
@@ -57,9 +56,11 @@ export default function NeuroReader({ textSize }) {
       }
     
       return (
+        <>
+
         <div className="flex flex-col">
-          {/* <AdjustTextSize /> */}
-          <AdjustColor magicColor={magicColor} />
+          <AdjustTextSize />
+          <AdjustColor />
           <label className="text-left mb-2 px-4 py-2 mt-2 text-base" htmlFor="input-text">
             Enter your text below:
           </label>
@@ -70,16 +71,18 @@ export default function NeuroReader({ textSize }) {
             id="input-text"
             rows={5}
             placeholder="Enter your text here"
-          />
+            />
           <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
+          {/* <div className={`${size}`}>is size {size}</div> */}
           <div className={`${textSize}`}>
             {boldFirstLetters(inputValue)}
           </div>
           <div>the color is: {magicColor}</div>
           <div>the text size is {textSize}</div>
-          <MyContext />
+          {/* <MyContext /> */}
 
         </div>
+          </>
       );
     
   

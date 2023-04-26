@@ -1,41 +1,42 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
+import { TextContext } from '../utilities/MyContext';
 
 
-export default function AdjustColor({ magicColor }) {
-
-    const [selectedColor, setSelectedColor] = useState(magicColor);
+export default function AdjustColor() {
+    const [state, dispatch] = useContext(TextContext);
 
     const handleColorChange = (color) => {
-        setSelectedColor(color);
+      dispatch({ type: 'SET_TEXT_COLOR', payload: color });
     };
+
+    // const [selectedColor, setSelectedColor] = useState(magicColor);
+
+    // const handleColorChange = (color) => {
+    //     setSelectedColor(color);
+    // };
 
     const setColor = 'text-red-500';
 
 
-  return (
-
-    <div className="">
-        <p>Select your color: ${magicColor} </p>
-      <button
-        className={`mr-2 h-6 w-6 rounded-full bg-pink-500 ${selectedColor === 'text-pink-500' ? 'bg-pink-500' : ''}`}
-        onClick={() => handleColorChange('text-pink-500')}
-      ></button>
-      <button
-        className={`mx-2 h-6 w-6 rounded-full bg-stone-600 ${selectedColor === 'text-stone-600' ? 'bg-stone-600' : ''}`}
-        onClick={() => handleColorChange('text-stone-600')}
-      ></button>
-      <button
-        className={`ml-2 h-6 w-6 rounded-full bg-cyan-900 ${selectedColor === 'text-cyan-900' ? 'bg-cyan-900' : ''}`}
-        onClick={() => handleColorChange('text-cyan-900')}
-      ></button>
-      <p className={`mt-4 ${selectedColor} text-lg font-bold`}>
-        This is sample text with {selectedColor} color.
-      </p>
-      <div className={`mt-4 ${selectedColor}-bg h-6 w-40 rounded-md`} />
-      {/* <NeuroReader setColor={setColor} /> */}
-    </div>
-
-
-  )
+    const colorOptions = [
+      { colorName: 'Pink', colorValue: 'text-pink-500' },
+      { colorName: 'Stone', colorValue: 'text-stone-600' },
+      { colorName: 'Cyan', colorValue: 'text-cyan-900' }
+    ];
+  
+    return (
+      <div>
+        <p>Choose a text color:</p>
+        {colorOptions.map((color) => (
+          <button
+            key={color.colorValue}
+            className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${color.colorValue}`}
+            onClick={() => handleColorChange(color.colorValue)}
+          >
+            {color.colorName}
+          </button>
+        ))}
+      </div>
+    );
 }

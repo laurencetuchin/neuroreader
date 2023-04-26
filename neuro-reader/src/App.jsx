@@ -19,7 +19,8 @@ import {
 // layouts
 import RootLayout from './layouts/RootLayout'
 import HowToUse from './utilities/HowToUse'
-
+import { TextProvider } from './utilities/MyContext'
+ 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<RootLayout />}>
@@ -35,6 +36,8 @@ function App() {
 
   return ( 
     <>
+    <TextProvider>
+
     <div className='bg-slate-50'>
 
           {/* <NavigationHeader /> */}
@@ -47,13 +50,14 @@ function App() {
   This is a styled div using Tailwind CSS classes
 </div> */}
 
-         
+
 
           <RouterProvider router={router} />
 
        
           
         </div>
+      </TextProvider>
       </>
 
   )

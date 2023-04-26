@@ -1,30 +1,28 @@
-import { useState } from "react";
-import React from 'react'
+import {  useContext } from "react";
+import React from 'react';
+import { TextContext } from "../utilities/MyContext";
 
-export default function AdjustTextSize() {
+// export const SizeContext = createContext('text-xl');
 
-    const [selectedSize, setSelectedSize] = useState('text-base');
+ export default function AdjustTextSize() {
+
+  const [state, dispatch] = useContext(TextContext);
+
+  const handleTextSizeChange = (size) => {
+    dispatch({ type: SET_TEXT_SIZE, payload: size });
+  };
+
+ 
+
+
   return (
     <div>
-        <p>Select your text size: </p>
-        <button className={`mr-2 px-2 py-1 rounded ${selectedSize === 'text-sm' ? 
-        'bg-gray-300' : ''}`} onClick={() => setSelectedSize('text-sm')}>
-            Small
-        </button>
-        <button
-        className={`mx-2 px-2 py-1 rounded ${selectedSize === 'text-base' ? 'bg-gray-300' : ''}`}
-        onClick={() => setSelectedSize('text-base')}
-      >
-        Medium
-      </button>
-      <button
-        className={`ml-2 px-2 py-1 rounded ${selectedSize === 'text-lg' ? 'bg-gray-300' : ''}`}
-        onClick={() => setSelectedSize('text-lg')}
-      >
-        Large
-      </button>
-        
-        <p className={`mt-4 ${selectedSize}`}>This is sample text with {selectedSize} size.</p>
+      <p>Select text size:</p>
+      <button onClick={() => handleTextSizeChange('text-sm')} className="text-sm px-2 py-1 m-1 rounded bg-gray-200 hover:bg-gray-300">Small</button>
+      <button onClick={() => handleTextSizeChange('text-lg')} className="text-lg px-2 py-1 m-1 rounded bg-gray-200 hover:bg-gray-300">Large</button>
+      <button onClick={() => handleTextSizeChange('text-xl')} className="text-xl px-2 py-1 m-1 rounded bg-gray-200 hover:bg-gray-300">Extra Large</button>
     </div>
-  )
+  );
 }
+
+
