@@ -5,7 +5,8 @@ import { TextProvider, TextContext } from '../utilities/MyContext';
 import AdjustTextSize from './AdjustTextSize';
 
 export default function NeuroReader({ textSize }) {
-
+    const [textState, textDispatch] = useContext(TextContext);
+    const currentTextColor = textState.textColor; 
     const [inputValue, setInputValue] = useState('');
     // const size = useContext(TextSizeContext);
 
