@@ -1,17 +1,22 @@
 import React from 'react'
+import { useContext } from 'react';
 import { useState } from 'react'
+import MyContext from '../utilities/MyContext';
 import AdjustColor from './AdjustColor';
 // import AdjustTextSize from './AdjustTextSize';
 
 export default function NeuroReader({ textSize }) {
 
     const [inputValue, setInputValue] = useState('');
+    // const size = useContext(TextSizeContext);
 
     function handleInputChange(event) {
         setInputValue(event.target.value);
     }
 
     const magicColor = "text-red-900";
+    
+    
 
     // function that takes word input length and identifies whether appropriate to bold or not
     // need to update to include min one character if word length < 3 
@@ -72,6 +77,7 @@ export default function NeuroReader({ textSize }) {
           </div>
           <div>the color is: {magicColor}</div>
           <div>the text size is {textSize}</div>
+          <MyContext />
 
         </div>
       );
