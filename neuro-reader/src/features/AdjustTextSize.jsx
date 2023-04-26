@@ -1,6 +1,6 @@
 import {  useContext } from "react";
 import React from 'react';
-import { TextContext } from "../utilities/MyContext";
+import { TextContext, SET_TEXT_SIZE } from "../utilities/MyContext";
 
 // export const SizeContext = createContext('text-xl');
 

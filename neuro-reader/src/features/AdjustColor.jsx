@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState, useContext } from 'react'
-import { TextContext } from '../utilities/MyContext';
+import { TextContext, SET_TEXT_COLOR } from '../utilities/MyContext';
 
 
 export default function AdjustColor() {

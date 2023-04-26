@@ -1,6 +1,9 @@
 import React from "react";
 import { createContext, useContext, useState, useReducer } from "react";
 
+const SET_TEXT_SIZE = 'SET_TEXT_SIZE';
+const SET_TEXT_COLOR = 'SET_TEXT_COLOR';
+
 const TextContext = createContext();
 
 const initialState = {
@@ -38,6 +41,7 @@ const TextProvider = ({ children }) => {
     return (
         <TextContext.Provider value={[state, dispatch]}>
             {children}
+            <div >color</div>
         </TextContext.Provider>
     );
 }
@@ -59,4 +63,4 @@ const TextProvider = ({ children }) => {
 //     )
 // }
 
-export { TextContext, TextProvider};
+export { TextContext, TextProvider, SET_TEXT_SIZE, SET_TEXT_COLOR};
