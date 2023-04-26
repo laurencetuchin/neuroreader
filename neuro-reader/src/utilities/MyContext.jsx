@@ -17,7 +17,7 @@ const reducer = (state, action) => {
         case SET_TEXT_SIZE:
             return {
                 ...state,
-                textColor: action.payload
+                textSize: action.payload
             };
         case SET_TEXT_COLOR:
             return {
@@ -41,7 +41,7 @@ const TextProvider = ({ children }) => {
     return (
         <TextContext.Provider value={[state, dispatch]}>
             {children}
-            <div >color</div>
+            <div className={`${state.textColor} ${state.textSize}`}>color</div>
         </TextContext.Provider>
     );
 }
