@@ -75,7 +75,7 @@ export default function NeuroReader({ textSize }) {
             />
           <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
           {/* <div className={`${size}`}>is size {size}</div> */}
-          <div className={`${textSize}`}>
+          <div className={`${textState.textSize} ${textState.textColor}`}>
             {boldFirstLetters(inputValue)}
           </div>
           <div>the color is: {magicColor}</div>
