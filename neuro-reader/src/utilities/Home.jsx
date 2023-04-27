@@ -14,7 +14,6 @@ export default function Home() {
         <p className='font-sans text-base py-2'>It's time to upgrade your reading</p>
         
         {/* Add animation that bolds the writing in the P tag */}
-        <AdjustTextSize />
         <NeuroReader textSize={textSize}/>
       
       </div>
