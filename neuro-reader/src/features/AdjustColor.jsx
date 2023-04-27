@@ -5,9 +5,11 @@ import { TextContext, SET_TEXT_COLOR } from '../utilities/MyContext';
 
 export default function AdjustColor() {
     const [state, dispatch] = useContext(TextContext);
+    const [selectedColor, setSelectedColor] = useState(null);
 
     const handleColorChange = (color) => {
       dispatch({ type: SET_TEXT_COLOR, payload: color });
+      setSelectedColor(color);
     };
 
     // const [selectedColor, setSelectedColor] = useState(magicColor);
@@ -24,6 +26,13 @@ export default function AdjustColor() {
       { colorName: 'Stone', colorValue: 'text-stone-600' },
       { colorName: 'Cyan', colorValue: 'text-cyan-900' }
     ];
+
+    const getButtonClass = (color) => {
+      if (color.colorValue === selectedColor) {
+        return 'border-2 border-black';
+      }
+      return 'border border-gray-300';
+    };
   
     return (
       <div>
@@ -31,7 +40,7 @@ export default function AdjustColor() {
         {colorOptions.map((color) => (
           <button
             key={color.colorValue}
-            className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${color.colorValue}`}
+            className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${color.colorValue} ${getButtonClass(color)}`}
             onClick={() => handleColorChange(color.colorValue)}
           >
             {color.colorName}
