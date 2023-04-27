@@ -29,7 +29,7 @@ export default function AdjustColor() {
 
     const getButtonClass = (color) => {
       if (color.colorValue === selectedColor) {
-        return 'border-2 border-black';
+        return 'border-2 border-slate-900';
       }
       return 'border border-gray-300';
     };

@@ -28,7 +28,7 @@ import { TextContext, SET_TEXT_SIZE } from "../utilities/MyContext";
 
   const getButtonClass = (size) => {
     if (size.sizeValue === selectedSize){
-      return 'border-2 border-black';
+      return 'border-2 border-slate-900';
     }
     return 'border border-gray-300';
   }

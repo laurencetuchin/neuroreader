@@ -22,7 +22,7 @@ export default function AdjustFontWeight() {
 
     const getButtonClass = (weight) => {
         if (weight.weightValue === selectedWeight){
-            return 'border-2 border-black';
+            return 'border-2 border-slate-900';
         } 
         return 'border border-gray-300';
     }

@@ -22,7 +22,7 @@ export default function AdjustTextFont() {
 
     const getButtonClass = (font) => {
         if (font.fontValue === selectedFont){
-            return 'border-2 border-black';
+            return 'border-2 border-slate-900';
         }
         return 'border border-gray-300';
     }
