@@ -4,13 +4,16 @@ import { createContext, useContext, useState, useReducer } from "react";
 const SET_TEXT_SIZE = 'SET_TEXT_SIZE';
 const SET_TEXT_COLOR = 'SET_TEXT_COLOR';
 const SET_TEXT_FONT = 'SET_TEXT_FONT';
+const SET_FONT_WEIGHT = 'SET_FONT_WEIGHT';
+
 
 const TextContext = createContext();
 
 const initialState = {
     textSize: 'text-xl',
     textColor: 'text-pink-900',
-    textFont: 'font-sans'
+    textFont: 'font-sans',
+    textWeight: 'font-normal'
 };
 
 const reducer = (state, action) => {
@@ -30,6 +33,11 @@ const reducer = (state, action) => {
                 ...state,
                 textFont: action.payload
             }
+            case SET_FONT_WEIGHT:
+                return {
+                    ...state,
+                    textWeight: action.payload
+                };
     
         default:
             return state;
@@ -64,4 +72,4 @@ const TextProvider = ({ children }) => {
 //     )
 // }
 
-export { TextContext, TextProvider, SET_TEXT_SIZE, SET_TEXT_COLOR, SET_TEXT_FONT};
+export { TextContext, TextProvider, SET_TEXT_SIZE, SET_TEXT_COLOR, SET_TEXT_FONT, SET_FONT_WEIGHT};
