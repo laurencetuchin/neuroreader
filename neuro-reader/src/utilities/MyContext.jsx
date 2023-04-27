@@ -3,6 +3,7 @@ import { createContext, useContext, useState, useReducer } from "react";
 
 const SET_TEXT_SIZE = 'SET_TEXT_SIZE';
 const SET_TEXT_COLOR = 'SET_TEXT_COLOR';
+const SET_TEXT_FONT = 'SET_TEXT_FONT';
 
 const TextContext = createContext();
 
@@ -63,4 +64,4 @@ const TextProvider = ({ children }) => {
 //     )
 // }
 
-export { TextContext, TextProvider, SET_TEXT_SIZE, SET_TEXT_COLOR};
+export { TextContext, TextProvider, SET_TEXT_SIZE, SET_TEXT_COLOR, SET_TEXT_FONT};
