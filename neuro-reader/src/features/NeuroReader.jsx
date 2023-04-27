@@ -6,7 +6,7 @@ import AdjustTextSize from './AdjustTextSize';
 import AdjustTextFont from './AdjustTextFont';
 import AdjustFontWeight from './AdjustFontWeight';
 
-export default function NeuroReader({ textSize }) {
+export default function NeuroReader() {
     const [textState, textDispatch] = useContext(TextContext);
     
     const [inputValue, setInputValue] = useState('');
@@ -16,7 +16,6 @@ export default function NeuroReader({ textSize }) {
         setInputValue(event.target.value);
     }
 
-    const magicColor = "text-red-900";
     
     
 
@@ -24,19 +23,18 @@ export default function NeuroReader({ textSize }) {
     // need to update to include min one character if word length < 3 
     function boldFirstLetters(text) {
         const words = text.split(/[' ']/);
-        const boldedWords = words.map(word => {
+        const boldedWords = words.map((word, index) => {
           if (word.length < 3) {
             const smallWord = word.charAt(0);
-
+        
             // fix word length only split char 1 
             // checks for period or comma 
             return (
-                <span>
-                    <span className="font-bold">{smallWord}
-                </span>
-                    <span>{word.slice(smallWord.length)}</span>    
+              <span key={index}>
+                <span className="font-bold">{smallWord}</span>
+                <span>{word.slice(smallWord.length)}</span>    
                 {/* <span>&nbsp;</span> */}
-            </span>
+              </span>
             );
           } else {
             // percentage calculation of word length
@@ -45,12 +43,10 @@ export default function NeuroReader({ textSize }) {
             const boldText = word.slice(0, wordLength);
             const plainText = word.slice(wordLength);
             return (
-              <span>
-                <span className="font-bold">
-                  {boldText}
-                </span>
+              <span key={index}>
+                <span className="font-bold">{boldText}</span>
                 {plainText}
-                  {/* <span>&nbsp;</span> */}
+                {/* <span>&nbsp;</span> */}
               </span>
             );
           }
@@ -78,14 +74,9 @@ export default function NeuroReader({ textSize }) {
             placeholder="Enter your text here"
             />
           <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
-          {/* <div className={`${size}`}>is size {size}</div> */}
           <div className={`${textState.textSize} ${textState.textColor} ${textState.textFont} ${textState.textWeight}`}>
             {boldFirstLetters(inputValue)}
           </div>
-          <div>the color is: {magicColor}</div>
-          <div className={`${textState.textColor} ${textState.textSize} ${textState.textFont} ${textState.textWeight}`}>the color is now: </div>
-          <div>the text size is {textSize}</div>
-          {/* <MyContext /> */}
 
         </div>
           </>
