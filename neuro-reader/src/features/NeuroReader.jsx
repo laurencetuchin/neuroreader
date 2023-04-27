@@ -77,7 +77,7 @@ export default function NeuroReader() {
             placeholder="Enter your text here"
             />
           <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
-          <div className={`${textState.textSize} ${textState.textColor} ${textState.textFont} ${textState.textWeight}`}>
+          <div className={`${textState.textSize} ${textState.textColor} ${textState.textFont} ${textState.textWeight} ${textState.textAlignment}`}>
             {boldFirstLetters(inputValue)}
           </div>
 

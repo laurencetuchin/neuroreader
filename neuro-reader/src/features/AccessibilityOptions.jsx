@@ -1,4 +1,5 @@
 import React from 'react'
+import AdjustAlignment from './AdjustAlignment'
 import AdjustColor from './AdjustColor'
 import AdjustFontWeight from './AdjustFontWeight'
 import AdjustTextFont from './AdjustTextFont'
@@ -15,6 +16,7 @@ export default function AccessibilityOptions() {
         <AdjustColor />
         <AdjustTextFont />
         <AdjustFontWeight />
+        <AdjustAlignment />
     </>
   )
 }

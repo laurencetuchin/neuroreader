@@ -38,7 +38,7 @@ export default function AdjustAlignment() {
                 className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${value.alignmentValue} ${getButtonClass(value)}`}
                 onClick={() => handleAlignmentChange(value.alignmentValue)}
             >
-
+                {value.alignmentName}
             </button>
         ))}
     </div>
