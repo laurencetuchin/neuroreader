@@ -14,10 +14,8 @@ export default function AdjustFontWeight() {
 
     const weightOptions = [
         { weightName: 'thin', weightValue: 'font-thin'},
-        { weightName: 'light', weightValue: 'font-light'},
         { weightName: 'regular', weightValue: 'font-normal'},
         { weightName: 'medium', weightValue: 'font-medium'},
-        { weightName: 'black', weightValue: 'font-black'},
     ]
 
     const getButtonClass = (weight) => {
