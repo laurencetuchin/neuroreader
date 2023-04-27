@@ -5,6 +5,7 @@ const SET_TEXT_SIZE = 'SET_TEXT_SIZE';
 const SET_TEXT_COLOR = 'SET_TEXT_COLOR';
 const SET_TEXT_FONT = 'SET_TEXT_FONT';
 const SET_FONT_WEIGHT = 'SET_FONT_WEIGHT';
+const SET_TEXT_ALIGNMENT = 'SET_TEXT_ALIGNMENT';
 
 
 const TextContext = createContext();
@@ -13,7 +14,8 @@ const initialState = {
     textSize: 'text-xl',
     textColor: 'text-pink-900',
     textFont: 'font-sans',
-    textWeight: 'font-normal'
+    textWeight: 'font-normal',
+    textAlignment: 'text-justify'
 };
 
 const reducer = (state, action) => {
@@ -33,12 +35,17 @@ const reducer = (state, action) => {
                 ...state,
                 textFont: action.payload
             }
-        case SET_FONT_WEIGHT:
-            return {
-                ...state,
-                textWeight: action.payload
-            };
-    
+            case SET_FONT_WEIGHT:
+                return {
+                    ...state,
+                    textWeight: action.payload
+                };
+                case SET_TEXT_ALIGNMENT:
+                    return {
+                        ...state,
+                        textAlignment: action.payload
+                    };
+                
         default:
             return state;
     }
@@ -72,4 +79,4 @@ const TextProvider = ({ children }) => {
 //     )
 // }
 
-export { TextContext, TextProvider, SET_TEXT_SIZE, SET_TEXT_COLOR, SET_TEXT_FONT, SET_FONT_WEIGHT};
+export { TextContext, TextProvider, SET_TEXT_SIZE, SET_TEXT_COLOR, SET_TEXT_FONT, SET_FONT_WEIGHT, SET_TEXT_ALIGNMENT};
