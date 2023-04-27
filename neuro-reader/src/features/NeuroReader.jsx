@@ -5,6 +5,8 @@ import { TextProvider, TextContext, SET_TEXT_COLOR } from '../utilities/MyContex
 import AdjustTextSize from './AdjustTextSize';
 import AdjustTextFont from './AdjustTextFont';
 import AdjustFontWeight from './AdjustFontWeight';
+import Accessibility from './AccessibilityOptions';
+import AccessibilityOptions from './AccessibilityOptions';
 
 export default function NeuroReader() {
     const [textState, textDispatch] = useContext(TextContext);
@@ -58,10 +60,11 @@ export default function NeuroReader() {
         <>
 
         <div className="flex flex-col">
-          <AdjustTextSize />
+          <AccessibilityOptions />
+          {/* <AdjustTextSize />
           <AdjustColor />
           <AdjustTextFont />
-          <AdjustFontWeight />
+          <AdjustFontWeight /> */}
           <label className="text-left mb-2 px-4 py-2 mt-2 text-base" htmlFor="input-text">
             Enter your text below:
           </label>
