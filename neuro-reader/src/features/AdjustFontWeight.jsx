@@ -5,7 +5,7 @@ import { TextContext, SET_FONT_WEIGHT } from '../utilities/MyContext';
 export default function AdjustFontWeight() {
 
     const [state, dispatch] = useContext(TextContext);
-    const [weight, setWeight] = useState('font-normal');
+    const [selectedWeight, setWeight] = useState('font-normal');
 
     const handleFontWeight = (weight) => {
         dispatch({ type: SET_FONT_WEIGHT, payload: weight})
@@ -21,7 +21,7 @@ export default function AdjustFontWeight() {
     ]
 
     const getButtonClass = (weight) => {
-        if (weight.weightValue === weight){
+        if (weight.weightValue === selectedWeight){
             return 'border-2 border-black';
         } 
         return 'border border-gray-300';
@@ -33,6 +33,7 @@ export default function AdjustFontWeight() {
             <button 
                 key={weight.weightValue}
                 className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${weight.fontValue} ${getButtonClass(weight)}`}
+                onClick={() => handleFontWeight(weight.weightValue)}
             >
                 {weight.weightName}
             </button>

@@ -33,11 +33,11 @@ const reducer = (state, action) => {
                 ...state,
                 textFont: action.payload
             }
-            case SET_FONT_WEIGHT:
-                return {
-                    ...state,
-                    textWeight: action.payload
-                };
+        case SET_FONT_WEIGHT:
+            return {
+                ...state,
+                textWeight: action.payload
+            };
     
         default:
             return state;
@@ -50,7 +50,7 @@ const TextProvider = ({ children }) => {
     return (
         <TextContext.Provider value={[state, dispatch]}>
             {children}
-            <div className={`${state.textColor} ${state.textSize} ${state.textFont}`}>color</div>
+            <div className={`${state.textColor} ${state.textSize} ${state.textFont} ${state.textWeight}`}>color</div>
         </TextContext.Provider>
     );
 }

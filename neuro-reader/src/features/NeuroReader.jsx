@@ -4,6 +4,7 @@ import AdjustColor from './AdjustColor';
 import { TextProvider, TextContext, SET_TEXT_COLOR } from '../utilities/MyContext';
 import AdjustTextSize from './AdjustTextSize';
 import AdjustTextFont from './AdjustTextFont';
+import AdjustFontWeight from './AdjustFontWeight';
 
 export default function NeuroReader({ textSize }) {
     const [textState, textDispatch] = useContext(TextContext);
@@ -64,6 +65,7 @@ export default function NeuroReader({ textSize }) {
           <AdjustTextSize />
           <AdjustColor />
           <AdjustTextFont />
+          <AdjustFontWeight />
           <label className="text-left mb-2 px-4 py-2 mt-2 text-base" htmlFor="input-text">
             Enter your text below:
           </label>
@@ -77,11 +79,11 @@ export default function NeuroReader({ textSize }) {
             />
           <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
           {/* <div className={`${size}`}>is size {size}</div> */}
-          <div className={`${textState.textSize} ${textState.textColor} ${textState.textFont}`}>
+          <div className={`${textState.textSize} ${textState.textColor} ${textState.textFont} ${textState.textWeight}`}>
             {boldFirstLetters(inputValue)}
           </div>
           <div>the color is: {magicColor}</div>
-          <div className={`${textState.textColor} ${textState.textSize} ${textState.textFont}`}>the color is now: </div>
+          <div className={`${textState.textColor} ${textState.textSize} ${textState.textFont} ${textState.textWeight}`}>the color is now: </div>
           <div>the text size is {textSize}</div>
           {/* <MyContext /> */}
 
