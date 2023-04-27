@@ -1,4 +1,4 @@
-import {  useContext } from "react";
+import {  useContext, useState } from "react";
 import React from 'react';
 import { TextContext, SET_TEXT_SIZE } from "../utilities/MyContext";
 
@@ -7,20 +7,46 @@ import { TextContext, SET_TEXT_SIZE } from "../utilities/MyContext";
  export default function AdjustTextSize() {
 
   const [state, dispatch] = useContext(TextContext);
+  const [selectedSize, setSelectedSize] = useState('text-lg');
+
 
   const handleTextSizeChange = (size) => {
     dispatch({ type: SET_TEXT_SIZE, payload: size });
+    setSelectedSize(size);
   };
 
+  const sizeOptions = [
+    { fontSize: 'Small', sizeValue: 'text-sm'},
+    { fontSize: 'Medium', sizeValue: 'text-md'},
+    { fontSize: 'Large', sizeValue: 'text-lg'},
+    { fontSize: 'XL', sizeValue: 'text-xl'},
+    { fontSize: '2XL', sizeValue: 'text-2xl'},
+    { fontSize: '3XL', sizeValue: 'text-3xl'},
+    { fontSize: '4XL', sizeValue: 'text-4xl'},
+    { fontSize: '5XL', sizeValue: 'text-5xl'}
+  ]
+
+  const getButtonClass = (size) => {
+    if (size.sizeValue === selectedSize){
+      return 'border-2 border-black';
+    }
+    return 'border border-gray-300';
+  }
  
 
 
   return (
     <div>
       <p>Select text size:</p>
-      <button onClick={() => handleTextSizeChange('text-sm')} className="text-sm px-2 py-1 m-1 rounded bg-gray-200 hover:bg-gray-300">Small</button>
-      <button onClick={() => handleTextSizeChange('text-lg')} className="text-lg px-2 py-1 m-1 rounded bg-gray-200 hover:bg-gray-300">Large</button>
-      <button onClick={() => handleTextSizeChange('text-xl')} className="text-xl px-2 py-1 m-1 rounded bg-gray-200 hover:bg-gray-300">Extra Large</button>
+      {sizeOptions.map((size) => (
+        <button
+          key={size.sizeValue}
+          className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${size.sizeValue} ${getButtonClass(size)}`}
+          onClick={() => handleTextSizeChange(size.sizeValue)}
+        >
+          {size.fontSize}
+        </button> 
+      ))}
     </div>
   );
 }
