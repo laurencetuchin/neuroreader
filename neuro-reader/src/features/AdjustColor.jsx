@@ -28,7 +28,7 @@ export default function AdjustColor() {
     ];
 
     const getButtonClass = (color) => {
-      if (color.colorValue === selectedColor) {
+      if (color.colorValue === state.textColor) {
         return 'border-2 border-slate-900';
       }
       return 'border border-gray-300';

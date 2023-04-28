@@ -25,9 +25,9 @@ import { TextContext, SET_TEXT_SIZE } from "../utilities/MyContext";
     { fontSize: '4XL', sizeValue: 'text-4xl'},
     { fontSize: '5XL', sizeValue: 'text-5xl'}
   ]
-
+  // checks state of button is selected - works after reset state
   const getButtonClass = (size) => {
-    if (size.sizeValue === selectedSize){
+    if (size.sizeValue === state.textSize){
       return 'border-2 border-slate-900';
     }
     return 'border border-gray-300';
@@ -41,7 +41,7 @@ import { TextContext, SET_TEXT_SIZE } from "../utilities/MyContext";
       {sizeOptions.map((size) => (
         <button
           key={size.sizeValue}
-          className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${size.sizeValue} ${getButtonClass(size)}`}
+          className={`text-size-button border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${size.sizeValue} ${getButtonClass(size)}`}
           onClick={() => handleTextSizeChange(size.sizeValue)}
         >
           {size.fontSize}

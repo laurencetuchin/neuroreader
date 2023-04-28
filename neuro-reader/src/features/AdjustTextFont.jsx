@@ -21,7 +21,7 @@ export default function AdjustTextFont() {
     ]
 
     const getButtonClass = (font) => {
-        if (font.fontValue === selectedFont){
+        if (font.fontValue === state.textFont){
             return 'border-2 border-slate-900';
         }
         return 'border border-gray-300';

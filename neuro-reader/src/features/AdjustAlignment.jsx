@@ -13,7 +13,7 @@ export default function AdjustAlignment() {
     };
     
     const getButtonClass = (value) => {
-        if (value.alignmentValue === selectedAlignment){
+        if (value.alignmentValue === state.textAlignment){
             return 'border-2 border-slate-900';
         }
         return 'border border-gray-300';

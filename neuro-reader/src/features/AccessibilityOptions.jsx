@@ -4,6 +4,7 @@ import AdjustColor from './AdjustColor'
 import AdjustFontWeight from './AdjustFontWeight'
 import AdjustTextFont from './AdjustTextFont'
 import AdjustTextSize from './AdjustTextSize'
+import Reset from './Reset'
 
 
 export default function AccessibilityOptions() {
@@ -17,6 +18,7 @@ export default function AccessibilityOptions() {
         <AdjustTextFont />
         <AdjustFontWeight />
         <AdjustAlignment />
+        <Reset />
     </>
   )
 }
