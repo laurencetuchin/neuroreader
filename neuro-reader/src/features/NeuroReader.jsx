@@ -13,6 +13,7 @@ export default function NeuroReader() {
     
     const [inputValue, setInputValue] = useState('');
     // const size = useContext(TextSizeContext);
+    const borderClass = inputValue ? 'border border-gray-300 rounded-md py-2 px-4 mt-2' : '';
 
     function handleInputChange(event) {
         setInputValue(event.target.value);
@@ -77,8 +78,13 @@ export default function NeuroReader() {
             placeholder="Enter your text here"
             />
           <div className='py-2 text-left text-lg px-4 text-slate-400'><p>Output text:</p></div>
+          <div>
+          <div className={borderClass}>
           <div className={`${textState.textSize} ${textState.textColor} ${textState.textFont} ${textState.textWeight} ${textState.textAlignment}`}>
             {boldFirstLetters(inputValue)}
+          </div>
+          </div>
+          
           </div>
 
         </div>

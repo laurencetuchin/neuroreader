@@ -10,8 +10,8 @@ import Reset from './Reset'
 export default function AccessibilityOptions() {
   return (
     <>
-    <div>
-        <h4 className='py-4 xl:text-2xl text-lg font-medium text-slate-600'>Accessibility options</h4>
+    <div className='container mx-auto'>
+        <h4 className='xl:text-xl text-xl font-bold mb-8 text-slate-700'>Accessibility options</h4>
     </div>
         <AdjustTextSize />
         <AdjustColor />
