@@ -10,11 +10,11 @@ export default function HowToUse() {
         {description: 'Start reading the converted text and take advantage of the customised support provided to help you read more easily and effectively.', key: 3}
     ];
   return (
-    <div className='contain mx-auto py-2 text-center'>
+    <div className='container mx-auto py-2'>
         <h1 className='xl:text-xl text-xl font-bold mb-8 text-slate-700'>How to use Neuro Reader</h1>
         <div className=''>
             
-            <ol className='text-left space-y-4 text-slate-500 text-justify font-light'>
+            <ol className='text-left md:ml-10 space-y-4 text-slate-500 text-justify font-light text-lg'>
                 {howTo.map((instruction, index) => {
                     return (
                         <li key={instruction.key}>{index + 1}. {instruction.description}</li>

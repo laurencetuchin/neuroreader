@@ -16,9 +16,9 @@ export default function RootLayout() {
         </header>
 
         <main className='md:container md:mx-auto '>
-        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-blue-400 bg-clip-text">Neuro Reader</h1>
+        <h1 className="text-center text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-blue-400 bg-clip-text">Neuro Reader</h1>
 
-            <h4 className="text-center text-xl sm:text-sm md:text-sm lg:text-sm xl:text-2xl py-8">Upgrade your learning today</h4>
+            <h4 className="text-center text-lg xl:text-2xl py-2 text-slate-400">Upgrade your learning today</h4>
         
             <Outlet />
         </main>

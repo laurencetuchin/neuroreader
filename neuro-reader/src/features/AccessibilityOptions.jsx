@@ -11,7 +11,7 @@ export default function AccessibilityOptions() {
   return (
     <>
     <div>
-        <h4 className='py-4 text-lg font-medium'>Accessibility options</h4>
+        <h4 className='py-4 xl:text-2xl text-lg font-medium text-slate-600'>Accessibility options</h4>
     </div>
         <AdjustTextSize />
         <AdjustColor />

@@ -65,7 +65,7 @@ export default function NeuroReader() {
           <AdjustColor />
           <AdjustTextFont />
           <AdjustFontWeight /> */}
-          <label className="text-left mb-2 px-4 py-2 mt-2 text-base" htmlFor="input-text">
+          <label className="text-left mt-2 px-4 text-lg text-slate-400" htmlFor="input-text">
             Enter your text below:
           </label>
           <textarea
@@ -76,7 +76,7 @@ export default function NeuroReader() {
             rows={5}
             placeholder="Enter your text here"
             />
-          <div className='py-4 text-left text-base px-4'><p>Output text:</p></div>
+          <div className='py-2 text-left text-lg px-4 text-slate-400'><p>Output text:</p></div>
           <div className={`${textState.textSize} ${textState.textColor} ${textState.textFont} ${textState.textWeight} ${textState.textAlignment}`}>
             {boldFirstLetters(inputValue)}
           </div>

@@ -22,9 +22,18 @@ export default function AdjustColor() {
 
 
     const colorOptions = [
+      { colorName: 'Yellow', colorValue: 'text-yellow-400' },
+      { colorName: 'Orange', colorValue: 'text-orange-500' },
       { colorName: 'Pink', colorValue: 'text-pink-500' },
+      { colorName: 'Rose', colorValue: 'text-rose-400' },
+      { colorName: 'Cyan', colorValue: 'text-cyan-500' },
+      { colorName: 'Blue', colorValue: 'text-sky-600' },
+      { colorName: 'Violet', colorValue: 'text-violet-400' },
+      { colorName: 'Teal', colorValue: 'text-teal-600' },
+      { colorName: 'Green', colorValue: 'text-green-600' },
+      { colorName: 'Grey', colorValue: 'text-gray-600' },
       { colorName: 'Stone', colorValue: 'text-stone-600' },
-      { colorName: 'Cyan', colorValue: 'text-cyan-900' }
+      { colorName: 'Zinc', colorValue: 'text-zinc-500' },
     ];
 
     const getButtonClass = (color) => {

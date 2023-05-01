@@ -13,7 +13,7 @@ const TextContext = createContext();
 
 const initialState = {
     textSize: 'text-xl',
-    textColor: 'text-pink-900',
+    textColor: 'text-violet-400',
     textFont: 'font-sans',
     textWeight: 'font-normal',
     textAlignment: 'text-justify'
@@ -59,7 +59,7 @@ const TextProvider = ({ children }) => {
     return (
         <TextContext.Provider value={[state, dispatch]}>
             {children}
-            <div className={`${state.textColor} ${state.textSize} ${state.textFont} ${state.textWeight}`}>color</div>
+            <div className={`${state.textColor} ${state.textSize} ${state.textFont} ${state.textWeight} ${state.textAlignment}`}>color</div>
         </TextContext.Provider>
     );
 }

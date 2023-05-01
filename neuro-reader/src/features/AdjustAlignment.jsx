@@ -24,7 +24,7 @@ export default function AdjustAlignment() {
         { alignmentName: 'Left', alignmentValue: 'text-left'},
         { alignmentName: 'Center', alignmentValue: 'text-center'},
         { alignmentName: 'Right', alignmentValue: 'text-right'},
-        { alignmentName: 'Justify', alignmentValue: 'text-justify'}
+        { alignmentName: 'Expand to fullscreen', alignmentValue: 'text-justify'}
 
     ]
 
