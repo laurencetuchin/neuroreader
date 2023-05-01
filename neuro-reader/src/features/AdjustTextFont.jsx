@@ -29,11 +29,11 @@ export default function AdjustTextFont() {
 
   return (
     <div>
-        <p>Select a font:</p>
+        <p className="text-lg font-medium text-slate-700 mt-2">Select a font:</p>
         {fontOptions.map((font) => (
             <button 
                 key={font.fontValue}
-                className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${font.fontValue} ${getButtonClass(font)}`}
+                className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-1 mb-2 ${font.fontValue} ${getButtonClass(font)}`}
                 onClick={() => handleFontChange(font.fontValue)} 
                 >
                     {font.fontName}

@@ -37,11 +37,11 @@ import { TextContext, SET_TEXT_SIZE } from "../utilities/MyContext";
 
   return (
     <div>
-      <p>Select text size:</p>
+      <p className="text-lg font-medium text-slate-700">Select text size:</p>
       {sizeOptions.map((size) => (
         <button
           key={size.sizeValue}
-          className={`text-size-button border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${size.sizeValue} ${getButtonClass(size)}`}
+          className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-1 mb-2 ${size.sizeValue} ${getButtonClass(size)}`}
           onClick={() => handleTextSizeChange(size.sizeValue)}
         >
           {size.fontSize}

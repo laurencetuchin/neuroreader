@@ -56,9 +56,9 @@ export default function Reset() {
 
   return (
     <div>
-        <p>Reset:</p>
+        <p className='text-lg font-medium text-slate-700 mt-2'>Reset:</p>
         <button
-            className={`border ${state.textSize === initialState.textSize ? 'border-gray-300' : 'border-red-400'} rounded-md py-2 px-4 mt-2 mr-2 hover:border-red-400 hover:text-white-500`}
+            className={`border ${state.textSize === initialState.textSize ? 'border-gray-300' : 'border-red-400'} rounded-md py-2 px-4 mt-2 mb-2 hover:border-red-400 hover:text-white-500`}
             onClick={() => handleResetChange()}
         >
             Reset Settings

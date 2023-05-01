@@ -36,11 +36,11 @@ export default function AdjustColor() {
   
     return (
       <div>
-        <p>Choose a text color:</p>
+        <p className='text-lg font-medium text-slate-700 mt-2'>Choose a text color:</p>
         {colorOptions.map((color) => (
           <button
             key={color.colorValue}
-            className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${color.colorValue} ${getButtonClass(color)}`}
+            className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-1 mb-2 ${color.colorValue} ${getButtonClass(color)}`}
             onClick={() => handleColorChange(color.colorValue)}
           >
             {color.colorName}
