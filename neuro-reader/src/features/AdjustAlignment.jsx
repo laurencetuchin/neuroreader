@@ -31,7 +31,7 @@ export default function AdjustAlignment() {
   return (
 
     <div>
-        <p>Select an alignment:</p>
+        <p>Text alignment:</p>
         {alignmentOptions.map((value) => (
             <button 
                 key={value.alignmentValue}

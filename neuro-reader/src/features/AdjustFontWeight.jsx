@@ -26,11 +26,11 @@ export default function AdjustFontWeight() {
     }
   return (
     <div>
-        <p>Select a weight:</p>
+        <p className="">Font weight:</p>
         {weightOptions.map((weight) =>
             <button 
                 key={weight.weightValue}
-                className={`border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${weight.weightValue} ${getButtonClass(weight)}`}
+                className={`text-justify border border-gray-300 rounded-md py-2 px-4 mt-2 mr-2 ${weight.weightValue} ${getButtonClass(weight)}`}
                 onClick={() => handleFontWeight(weight.weightValue)}
             >
                 {weight.weightName}

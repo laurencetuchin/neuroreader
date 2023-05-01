@@ -13,11 +13,13 @@ export default function RootLayout() {
             <NavLink to="how">How to use</NavLink>
                 </div>
             </nav>
-
         </header>
 
         <main className='md:container md:mx-auto '>
-        <h1 className='mb-4 font-bold text-gray-800 text-3xl md:text-5xl lg-text-6xl'>Neuro Reader</h1>
+        <h1 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl  font-bold text-transparent bg-gradient-to-r from-pink-300 via-purple-300 to-blue-400 bg-clip-text">Neuro Reader</h1>
+
+            <h4 className="text-center text-lg sm:text-2xl md:text-2xl lg:text-2xl xl:text-3xl py-8">Upgrade your learning today</h4>
+        
             <Outlet />
         </main>
     </div>
