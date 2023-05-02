@@ -7,11 +7,9 @@ import AdjustTextFont from './AdjustTextFont';
 import AdjustFontWeight from './AdjustFontWeight';
 import Accessibility from './AccessibilityOptions';
 import AccessibilityOptions from './AccessibilityOptions';
-import { ThemeContext } from '../utilities/ThemeContext';
 
 export default function NeuroReader() {
     const [textState, textDispatch] = useContext(TextContext);
-    const {darkMode, toggleDarkMode} = useContext(ThemeContext);
     
     const [inputValue, setInputValue] = useState('');
     // const size = useContext(TextSizeContext);
@@ -65,16 +63,8 @@ export default function NeuroReader() {
     
       return (
         <>
-        <div className={darkMode ? 'dark' : 'light'}>
-
         <div className="flex flex-col">
-          {!darkMode && (
-            <button onClick={toggleDarkMode}>Toggle dark mode</button>
-          )}
-          {darkMode && (
-            <button onClick={toggleDarkMode}>Toggle light mode</button>
-
-          )}
+    
           {showAccessibilityOptions && (
             <>
               <button className={`text-center mt-2 px-4 text-lg text-slate-400 border-gray-300 `} onClick={toggleAccessibilityOptions}>Hide accessibility options</button>
@@ -110,7 +100,6 @@ export default function NeuroReader() {
           </div>
 
         </div>
-            </div>
           </>
       );
     

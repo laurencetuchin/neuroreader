@@ -1,8 +1,12 @@
 import React from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
-
 export default function RootLayout() {
+
   return (
+    
+
+    <div>
+
     <div className="root-layout">
         <header>
             <nav className='md:flex md:justify-end '>
@@ -22,6 +26,7 @@ export default function RootLayout() {
         
             <Outlet />
         </main>
+    </div>
     </div>
   )
 }

@@ -33,7 +33,7 @@
   /* @apply text-blue-500; */
 }
 
-.dark {
+/* .dark {
   background-color: #1f2937;
   color: #f8fafc;
 }
@@ -52,15 +52,15 @@
 
   color: #1f2937;
   /* @apply text-gray-600 bg-slate-900; */
-}
 
-.dark .border-gray-300 {
+
+/* .dark .border-gray-300 {
   @apply border-orange-500;
 }
 
 .dark .text-slate-400 {
   @apply text-slate-900;
-}
+} */ 
 
 main {
   max-width: 1200px;
