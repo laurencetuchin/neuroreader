@@ -14,11 +14,15 @@ export default function NeuroReader() {
     const [inputValue, setInputValue] = useState('');
     // const size = useContext(TextSizeContext);
     const borderClass = inputValue ? 'border border-gray-300 rounded-md py-2 px-4 mt-2' : '';
+    const [showAccessibilityOptions, setShowAccessibilityOptions] = useState(true);
 
     function handleInputChange(event) {
         setInputValue(event.target.value);
     }
 
+    function toggleAccessibilityOptions() {
+      setShowAccessibilityOptions(!showAccessibilityOptions);
+    }
     
     
 
@@ -61,7 +65,15 @@ export default function NeuroReader() {
         <>
 
         <div className="flex flex-col">
-          <AccessibilityOptions />
+          {showAccessibilityOptions && (
+            <>
+              <button className='text-center mt-2 px-4 text-lg text-slate-400 border-gray-300' onClick={toggleAccessibilityOptions}>Hide accessibility options</button>
+              <AccessibilityOptions />
+            </>
+          )}
+          {!showAccessibilityOptions && (
+            <button className='text-center mt-2 px-4 text-left text-slate-400 border-gray-300' onClick={toggleAccessibilityOptions}>Show accessibility options</button>
+          )}
           {/* <AdjustTextSize />
           <AdjustColor />
           <AdjustTextFont />

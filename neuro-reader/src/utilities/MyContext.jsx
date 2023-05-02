@@ -59,7 +59,7 @@ const TextProvider = ({ children }) => {
     return (
         <TextContext.Provider value={[state, dispatch]}>
             {children}
-            <div className={`${state.textColor} ${state.textSize} ${state.textFont} ${state.textWeight} ${state.textAlignment}`}>color</div>
+            {/* <div className={`${state.textColor} ${state.textSize} ${state.textFont} ${state.textWeight} ${state.textAlignment}`}></div> */}
         </TextContext.Provider>
     );
 }
