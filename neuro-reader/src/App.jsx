@@ -20,6 +20,7 @@ import {
 import RootLayout from './layouts/RootLayout'
 import HowToUse from './utilities/HowToUse'
 import { TextProvider } from './utilities/MyContext'
+import { ThemeProvider } from './utilities/ThemeContext'
  
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -36,6 +37,7 @@ function App() {
 
   return ( 
     <>
+    <ThemeProvider>
     <TextProvider>
 
     <div className='bg-slate-50'>
@@ -58,6 +60,7 @@ function App() {
           
         </div>
       </TextProvider>
+      </ThemeProvider>
       </>
 
   )
