@@ -83,7 +83,7 @@ export default function NeuroReader() {
           <AdjustTextFont />
         <AdjustFontWeight /> */}
 			</div>
-			<div className="container mx-auto px-12">
+			<div className="container mx-auto md:px-12">
 				<div className="flex flex-col">
 					<label
 						className="text-left mt-2 px-4 text-lg text-slate-400"
