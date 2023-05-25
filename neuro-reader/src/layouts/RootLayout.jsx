@@ -5,7 +5,7 @@ export default function RootLayout() {
 		<div>
 			<div className="root-layout">
 				<header>
-					<nav className="md:flex md:justify-end ">
+					<nav className="md:flex md:justify-around lg:flex lg:justify-around">
 						<div className="flex-items-center text-right text-base mt-6">
 							<NavLink to="/">Home</NavLink>
 							<NavLink to="about">About</NavLink>

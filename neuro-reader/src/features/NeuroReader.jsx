@@ -1,15 +1,5 @@
-import React from "react";
-import { useState, useContext } from "react";
-import AdjustColor from "./AdjustColor";
-import {
-	TextProvider,
-	TextContext,
-	SET_TEXT_COLOR,
-} from "../utilities/MyContext";
-import AdjustTextSize from "./AdjustTextSize";
-import AdjustTextFont from "./AdjustTextFont";
-import AdjustFontWeight from "./AdjustFontWeight";
-import Accessibility from "./AccessibilityOptions";
+import React, { useContext, useState } from "react";
+import { TextContext } from "../utilities/MyContext";
 import AccessibilityOptions from "./AccessibilityOptions";
 
 export default function NeuroReader() {
@@ -93,7 +83,7 @@ export default function NeuroReader() {
           <AdjustTextFont />
         <AdjustFontWeight /> */}
 			</div>
-			<div className="container mx-auto">
+			<div className="container mx-auto px-12">
 				<div className="flex flex-col">
 					<label
 						className="text-left mt-2 px-4 text-lg text-slate-400"
